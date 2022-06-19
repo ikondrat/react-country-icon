@@ -12,13 +12,7 @@ describe('CountryIcon', () => {
     const myClassName = 'my-test-classname'
     const result = render(<CountryIcon className={myClassName} countryCode="CH" />)
 
-    expect(result.container.querySelector('svg')).toHaveClass(myClassName)
+    expect(result.container.querySelector('img')).toHaveAttribute('src', '')
   })
 
-  it('accepts svg props', () => {
-    const viewBox = '0 0 40 40'
-    const result = render(<CountryIcon countryCode="CH" svgProps={{ viewBox }} />)
-
-    expect(result.container.querySelector('svg')).toHaveAttribute('viewBox', viewBox)
-  })
 })

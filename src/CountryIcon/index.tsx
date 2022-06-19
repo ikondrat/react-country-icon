@@ -1,9 +1,7 @@
 import { makeStyles } from '@material-ui/core'
+import Icon from '@material-ui/core/Icon';
 import { FC } from 'react'
 import classnames from 'classnames'
-
-import * as iconsQuadratic from './flags_1x1'
-import * as iconsNormal from './flags_4x3'
 
 export const testId = 'country-icon'
 
@@ -19,10 +17,8 @@ const useStyles = makeStyles({
   },
 })
 
-export type CountryIconCode = keyof typeof iconsNormal
-
 interface CountryIconProps {
-  countryCode: CountryIconCode
+  countryCode: string
   className?: string
   svgProps?: React.SVGProps<SVGSVGElement>
 }
@@ -30,15 +26,15 @@ interface CountryIconProps {
 export const CountryIcon: FC<CountryIconProps> = ({ countryCode, className, svgProps }) => {
   const isQuadratic = countryCode === 'CH' || countryCode === 'VA'
   const classes = useStyles()
-  const norm = iconsNormal as unknown as Record<string, any>
-  const icons = iconsQuadratic as unknown as Record<string, any>
-  const Component: any = isQuadratic ? icons[countryCode] : norm[countryCode]
+
   return (
-    <Component
-      {...svgProps}
-      className={classnames(classes.imageIcon, className, {
+    <Icon>
+      {/* @ts-ignore */}
+      <img alt="" className={classnames(classes.imageIcon, className, {
         [classes.imageIconQuadraric]: isQuadratic,
-      })}
-    />
+      })} src={`//unpkg.com/react-country-icon@1.0.0/dist/icons/${isQuadratic ? 'flags_1x1' : 'flags_4x3'}/${countryCode.toLowerCase()}.svg`}/>
+    </Icon>
   )
+
+
 }

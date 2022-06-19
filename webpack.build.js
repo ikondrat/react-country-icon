@@ -1,3 +1,4 @@
+const CopyPlugin = require("copy-webpack-plugin");
 const { merge } = require('webpack-merge')
 const getWebpackConfig = require('./config/webpack/webpack.common.js')
 const path = require('path')
@@ -18,6 +19,15 @@ module.exports = merge(
       react: 'umd react',
       'react-dom' : 'umd react-dom'
     },
+    plugins: [
+      new CopyPlugin({
+        patterns: [
+          { from: path.resolve(__dirname, 'icons/flags_1x1/*'), to: path.resolve(__dirname, process.env.DIST)},
+          { from: path.resolve(__dirname, 'icons/flags_4x3/*'), to: path.resolve(__dirname, process.env.DIST)},
+
+        ],
+      }),
+    ],
     output: {
       publicPath: '',
       filename: pkg.main.replace(distPrefixRe, ''),
