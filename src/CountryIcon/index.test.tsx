@@ -5,7 +5,7 @@ describe('CountryIcon', () => {
   it('renders icon', () => {
     const result = render(<CountryIcon countryCode="DE" />)
 
-    expect(result.container.querySelector('img')).toHaveAttribute('src', `//unpkg.com/react-country-icon@${process.env.npm_package_version}/dist/icons/flags_4x3/de.svg`)
+    expect(result.container.querySelector('img')).toHaveAttribute('src', `//unpkg.com/react-country-icon@${process.env.REACT_PACKAGE_VERSION}/dist/icons/flags_4x3/de.svg`)
   })
 
   it('passes classname', () => {
