@@ -1,5 +1,5 @@
 # react-country-icon
-Component to render country flag
+Component to render svg country flag
 
 ## Install
 
