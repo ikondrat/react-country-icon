@@ -32,7 +32,7 @@ export const CountryIcon: FC<CountryIconProps> = ({ countryCode, className, svgP
       {/* @ts-ignore */}
       <img alt="" className={classnames(classes.imageIcon, className, {
         [classes.imageIconQuadraric]: isQuadratic,
-      })} src={`//unpkg.com/react-country-icon@1.0.0/dist/icons/${isQuadratic ? 'flags_1x1' : 'flags_4x3'}/${countryCode.toLowerCase()}.svg`}/>
+      })} src={`//unpkg.com/react-country-icon@${process.env.npm_package_version}/dist/icons/${isQuadratic ? 'flags_1x1' : 'flags_4x3'}/${countryCode.toLowerCase()}.svg`}/>
     </Icon>
   )
 
