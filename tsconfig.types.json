@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+  },
+  "include": ["src/react-app-env.d.ts", "src/**/*"],
+  "exclude": ["**/*/*.test.tsx", "**/*/*.test.js", "**/*/*.test.jsx", "**/*/*.snap", "**/example/index.tsx", "src/setupTests.ts"]
+}

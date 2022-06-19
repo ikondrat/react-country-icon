@@ -1,0 +1,9 @@
+CHANGELOG.md
+package.json
+
+# ignore generate graphql defs
+**/*.graphql.d.ts
+!/src/apollo/index.graphql.d.ts
+/src/apollo/index.graphql
+/src/apollo/types
+/src/apollo/graphqlGateway-types
