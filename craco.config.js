@@ -23,10 +23,6 @@ module.exports = ({ env }) => {
       configure: jestConfig => {
         return {
           ...jestConfig,
-          transform: {
-            '\\.(gql|graphql)$': 'jest-transform-graphql',
-            ...jestConfig.transform,
-          },
           cacheDirectory: './.cache/jest',
           clearMocks: true,
           resetMocks: false,
