@@ -14,3 +14,7 @@ const ExampleComponent = () => (
   <div>Hello <CountryIcon countryCode="CH"/> </div>
 )
 ```
+
+## Example
+See here the example 
+[https://lq4o1k.csb.app/](https://codesandbox.io/s/nice-ishizaka-lq4o1k?file=/src/App.tsx)
