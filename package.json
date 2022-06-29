@@ -1,6 +1,6 @@
 {
   "name": "@crowdhouse/gdpr-consent",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shared Gdpr context component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
