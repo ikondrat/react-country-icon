@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import { InitAnalytics } from '.'
-import * as gdprContext from '../../contexts/GdprContext'
+import * as gdprContext from '../GdprContext'
 
 describe('InitAnalytics', () => {
   const setup = () => render(<InitAnalytics />)
