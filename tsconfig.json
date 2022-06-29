@@ -23,6 +23,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "./src"
-, "flags_1x1"  ]
+    "./src",
+    "node_modules"
+  ]
 }

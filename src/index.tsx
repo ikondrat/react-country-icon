@@ -1,1 +1,1 @@
-export * from './CountryIcon'
+export * from './GdprContext'

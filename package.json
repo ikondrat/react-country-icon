@@ -1,35 +1,22 @@
 {
-  "name": "react-country-icon",
+  "name": "@crowdhouse/gdpr-consent",
   "version": "1.0.2",
-  "description": "React component to render country icon by country isoCode",
+  "description": "Shared Gdpr context component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/*"
   ],
   "peerDependencies": {
-    "@material-ui/core": "^4.12.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ikondrat/react-country-icon.git"
+    "url": "https://github.com/crowdhouse/crowdhouse-ui/tree/main/packages/gdpr-consent"
   },
-  "keywords": [
-    "react",
-    "react",
-    "library",
-    "svg",
-    "country",
-    "flag"
-  ],
-  "author": "Kondrat Shmoylov <kondrat.shmoylov@gmail.com>",
+  "author": "Kondrat Shmoylov <kondrat.shmoylov@crowdhouse.ch>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ikondrat/react-country-icon/issues"
-  },
-  "homepage": "https://github.com/ikondrat/react-country-icon#readme",
   "scripts": {
     "build": "dotenv -c build -- webpack --config webpack.build.js",
     "prepare": "npm run lint && npm run test:ci && npm run build && npm run build:types",
@@ -122,5 +109,8 @@
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "@crowdhouse/iubenda": "^1.1.1"
   }
 }
