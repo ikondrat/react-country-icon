@@ -8,7 +8,7 @@ export const InitAnalytics: FC<{ analyticsKey: string }> = ({ analyticsKey }) =>
     if (isAccepted) {
       analytics.load(analyticsKey)
     }
-  }, [isAccepted])
+  }, [analyticsKey, isAccepted])
 
   return null
 }
